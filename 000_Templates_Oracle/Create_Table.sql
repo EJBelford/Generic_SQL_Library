@@ -3,7 +3,7 @@
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -14,12 +14,17 @@
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
 --        NOTES:
 --
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- Automatically available Auto Replace Keywords:
 --    Object Name:     %YourObjectName%
+--   Company Name:     %YourOrganization%
 --    Sysdate:         %SYSDATE% (YYYY-MM-DD)
 --    Date and Time:   %DATE%, %TIME%, and %DATETIME%
 --    Username:        %USERNAME% (set in TOAD Options, Procedure Editor)
@@ -49,7 +54,7 @@ CREATE SEQUENCE %YourObjectName%_seq
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -141,9 +146,7 @@ IS 'ACTIVE_FLAG - Flag indicating if the record is active or not.';
 COMMENT ON COLUMN %YourObjectName%.active_date 
 IS 'ACTIVE_DATE - Additional control for active_Fl indicating when the record became active.';
 COMMENT ON COLUMN %YourObjectName%.inactive_date 
-IS 'INACTIVE_DATE - Additional control for active_Fl indicating when the record went inactive.';
-COMMENT ON COLUMN %YourObjectName%.source_rec_id 
-IS 'SOURCE_REC_ID - Identifier to the orginial record received from a outside source.';       
+IS 'INACTIVE_DATE - Additional control for active_Fl indicating when the record went inactive.';       
 COMMENT ON COLUMN %YourObjectName%.insert_by 
 IS 'INSERT_BY - Reports who initially created the record.';
 COMMENT ON COLUMN %YourObjectName%.insert_date 
@@ -195,7 +198,7 @@ ORDER BY b.column_id;
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -205,6 +208,10 @@ ORDER BY b.column_id;
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -231,7 +238,7 @@ ALTER TABLE %YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -241,6 +248,10 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -268,7 +279,7 @@ CREATE UNIQUE INDEX ixu_%YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -278,6 +289,10 @@ CREATE UNIQUE INDEX ixu_%YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -310,7 +325,7 @@ ALTER TABLE %YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -320,6 +335,13 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -345,7 +367,7 @@ ALTER TABLE %YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -355,6 +377,13 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -380,7 +409,7 @@ ALTER TABLE %YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -390,6 +419,13 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -410,12 +446,12 @@ ALTER TABLE %YourObjectName%
     CHECK (hidden_flag='N' OR hidden_flag='Y');
 
 
---       SOURCE: ck_%YourObjectName%_stat_fl.sql
+-- SOURCE: ck_%YourObjectName%_stat_fl.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -425,6 +461,13 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -454,7 +497,7 @@ ALTER TABLE %YourObjectName%
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -464,6 +507,10 @@ ALTER TABLE %YourObjectName%
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -518,7 +565,7 @@ ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL';
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -529,8 +576,13 @@ ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL';
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
 --        NOTES:
--- 
+--
+--
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
 -- YYYY-MM-DD - Who         - RDP / ECP # - Details
@@ -549,7 +601,7 @@ GRANT SELECT                         ON %YourObjectName% TO eps_user;
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -559,6 +611,10 @@ GRANT SELECT                         ON %YourObjectName% TO eps_user;
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -580,7 +636,7 @@ GRANT SELECT                         ON %YourObjectName% TO eps_user;
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -590,6 +646,10 @@ GRANT SELECT                         ON %YourObjectName% TO eps_user;
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
+--
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
 --
 --        NOTES:
 --
@@ -678,17 +738,25 @@ END;
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 --
---        Name: %YourObjectName%_audit                                    
---      Author: %USERNAME%                                               
--- Description: Creates an audit table for %YourObjectName% that tracks   
---              changes to the parent table as they are made.              
---        Date: %SYSDATE%                                                 
+--         NAME: %YourObjectName%_audit                                    
+--      PURPOSE: Creates an audit table for %YourObjectName% that tracks   
+--               changes to the parent table as they are made.  
+--
+--   CREATED BY: %USERNAME%                                               
+-- CREATED DATE: %SYSDATE%                                                 
 --                                                                      
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
+--
 /*--+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---*/
 -- CHANGE HISTORY
 -- YYYY-MM-DD - Who           - RDP / ECP # - Details
@@ -729,16 +797,24 @@ COMMENT ON TABLE %YourObjectName%_audit
 ================================================================================
                           Classification: UNCLASSIFIED
 ================================================================================
-                  <Copyright, Belford DB Consulting LLC, 2017>
+                      Copyright, %YourOrganization%, 2018
                         Unpublished, All Rights Reserved
 ================================================================================
 ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---*/
 --                                                                            
--- Module Name: %YourObjectName%                                            
---      Author: %USERNAME%                                                  
--- Description:                                                               
---        Date: %SYSDATE%                                                   
+--        NAME: %YourObjectName%                                            
+--     PURPOSE:                                                               
+--
+--  CREATED BY: %USERNAME%                                                  
+-- CREATED DATE: %SYSDATE%                                                   
 --                                                                            
+--  ASSUMPTIONS:
+--
+--  LIMITATIONS:
+--
+--        NOTES:
+--
+--
 /*--+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---*/
 -- CHANGE HISTORY
 -- YYYY-MM-DD - Who           - RDP / ECP # - Details

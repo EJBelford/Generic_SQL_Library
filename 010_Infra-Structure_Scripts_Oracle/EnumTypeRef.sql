@@ -46,7 +46,8 @@ CREATE SEQUENCE EnumTypeRef_seq
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 --
 --         NAME: EnumTypeRef
---      PURPOSE: <Descripton>
+--      PURPOSE: The overarching data object that represents whole enumerations  
+--               in the database by their names.
 --
 --   CREATED BY: euGene Belford
 -- CREATED DATE: 2017-12-13

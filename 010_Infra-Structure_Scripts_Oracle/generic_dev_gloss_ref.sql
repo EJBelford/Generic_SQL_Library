@@ -1,3 +1,4 @@
+-- SOURCE: gnrc_sys_glos_ref_seq.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -13,19 +14,9 @@
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: gnrc_sys_glos_ref_seq.sql
---
 --        NOTES:
 --
 -- 
-/*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
--- Automatically available Auto Replace Keywords:
---    Object Name:     gnrc_sys_glos_ref
---    Sysdate:         %SYSDATE%
---    Date and Time:   %DATE%, %TIME%, and %DATETIME%
---    Username:        %USERNAME% (set in TOAD Options, Procedure Editor)
---    Table Name:      %TableName% (set in the "New PL/SQL Object" dialog) 
---
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
 -- YYYY-MM-DD - Who         - RDP / ECP # - Details..
@@ -43,7 +34,9 @@ CREATE SEQUENCE gnrc_sys_glos_ref_seq
     NOCYCLE
     NOCACHE
     NOORDER; 
+    
 
+-- SOURCE: gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -58,8 +51,6 @@ CREATE SEQUENCE gnrc_sys_glos_ref_seq
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: gnrc_sys_glos_ref.sql
 --
 --  ASSUMPTIONS:
 --
@@ -241,6 +232,7 @@ WHERE  a.column_name LIKE UPPER('%rec_id%');
 / 
 */
 
+-- SOURCE: pk_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -255,8 +247,6 @@ WHERE  a.column_name LIKE UPPER('%rec_id%');
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: pk_gnrc_sys_glos_ref.sql
 --
 --        NOTES:
 --
@@ -278,6 +268,7 @@ ALTER TABLE gnrc_sys_glos_ref
     );
     
    
+-- SOURCE: ixu_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -292,8 +283,6 @@ ALTER TABLE gnrc_sys_glos_ref
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: ixu_gnrc_sys_glos_ref.sql
 --
 --        NOTES:
 --
@@ -315,6 +304,8 @@ CREATE UNIQUE INDEX ixu_gnrc_sys_glos_ref
         term
         );
 
+
+-- SOURCE: fk_gnrc_sys_glos_ref_xx_id.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -329,8 +320,6 @@ CREATE UNIQUE INDEX ixu_gnrc_sys_glos_ref
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: fk_gnrc_sys_glos_ref_xx_id.sql
 --
 --        NOTES:
 --
@@ -357,6 +346,8 @@ CREATE UNIQUE INDEX ixu_gnrc_sys_glos_ref
 --        xx_code
 --        );
 
+
+-- SOURCE: ck_gnrc_sys_glos_ref_act_fl.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -372,7 +363,6 @@ CREATE UNIQUE INDEX ixu_gnrc_sys_glos_ref
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: ck_gnrc_sys_glos_ref_act_fl.sql
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -392,6 +382,8 @@ ALTER TABLE gnrc_sys_glos_ref
     ADD CONSTRAINT ck_gnrc_sys_glos_ref_act_fl 
     CHECK (active_flag='I' OR active_flag='N' OR active_flag='Y');
 
+
+-- SOURCE: ck_gnrc_sys_glos_ref_del_fl.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -407,7 +399,6 @@ ALTER TABLE gnrc_sys_glos_ref
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: ck_gnrc_sys_glos_ref_del_fl.sql
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -427,6 +418,8 @@ ALTER TABLE gnrc_sys_glos_ref
     ADD CONSTRAINT ck_gnrc_sys_glos_ref_del_fl 
     CHECK (delete_flag='N' OR delete_flag='Y');
 
+
+-- SOURCE: ck_gnrc_sys_glos_ref_hid_fl.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -442,7 +435,6 @@ ALTER TABLE gnrc_sys_glos_ref
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: ck_gnrc_sys_glos_ref_hid_fl.sql
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -462,6 +454,8 @@ ALTER TABLE gnrc_sys_glos_ref
     ADD CONSTRAINT ck_gnrc_sys_glos_ref_hid_fl 
     CHECK (hidden_flag='N' OR hidden_flag='Y');
 
+
+-- SOURCE: ck_gnrc_sys_glos_ref_stat_fl.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -477,7 +471,6 @@ ALTER TABLE gnrc_sys_glos_ref
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: ck_gnrc_sys_glos_ref_stat_fl.sql
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
@@ -501,6 +494,8 @@ ALTER TABLE gnrc_sys_glos_ref
         OR status='T' OR status='Z' OR status='N'
         );
 
+
+-- SOURCE: tr_i_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -515,8 +510,6 @@ ALTER TABLE gnrc_sys_glos_ref
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: tr_i_gnrc_sys_glos_ref.sql
 --
 --        NOTES:
 --
@@ -565,6 +558,8 @@ END tr_i_gnrc_sys_glos_ref;
  
 ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL';
 
+
+-- SOURCE: grant_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -580,8 +575,6 @@ ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL';
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: xxxTSK00xxx_grant_gnrc_sys_glos_ref.sql
---
 --        NOTES:
 -- 
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
@@ -596,6 +589,8 @@ ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL';
 GRANT SELECT, INSERT, UPDATE         ON gnrc_sys_glos_ref TO eps_admin;
 GRANT SELECT                         ON gnrc_sys_glos_ref TO eps_user;
 
+
+-- SOURCE: synonym_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -610,8 +605,6 @@ GRANT SELECT                         ON gnrc_sys_glos_ref TO eps_user;
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
---
---       SOURCE: xxxTSK00xxx_synonym_gnrc_sys_glos_ref.sql
 --
 --        NOTES:
 --
@@ -635,6 +628,8 @@ GRANT SELECT                         ON gnrc_sys_glos_ref TO eps_user;
 
 --CREATE PUBLIC SYNONYM gnrc_sys_glos_ref FOR pfsawh.gnrc_sys_glos_ref; 
 
+
+-- SOURCE: merge_gnrc_sys_glos_ref.sql
 /*--*----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
 ================================================================================
                           Classification: UNCLASSIFIED
@@ -644,25 +639,15 @@ GRANT SELECT                         ON gnrc_sys_glos_ref TO eps_user;
 ================================================================================
 ----*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 --
---         NAME: xxxTSK00xxx_merge_gnrc_sys_glos_ref
+--         NAME: merge_gnrc_sys_glos_ref
 --      PURPOSE: Inital load script for gnrc_sys_glos_ref
 --
 --   CREATED BY: %USERNAME%
 -- CREATED DATE: %SYSDATE%
 --
---       SOURCE: xxxTSK00xxxx_merge_gnrc_sys_glos_ref.sql
---
 --        NOTES:
 --
 -- 
-/*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
--- Automatically available Auto Replace Keywords:
---    Object Name:     gnrc_sys_glos_ref
---    Sysdate:         %SYSDATE%
---    Date and Time:   %DATE%, %TIME%, and %DATETIME%
---    Username:        %USERNAME% (set in TOAD Options, Procedure Editor)
---    Table Name:      %TableName% (set in the "New PL/SQL Object" dialog) 
---
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- CHANGE HISTORY
 -- YYYY-MM-DD - Who         - RDP / ECP # - Details..
@@ -736,10 +721,10 @@ BEGIN
     
 END;  
 / 
-
 */
 
-/* Source File: gnrc_sys_glos_ref_audit.sql                                  */
+
+/* SOURCE: gnrc_sys_glos_ref_audit.sql                                  */
 /*--+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---*/
 /*                                                                            */
 /* Module Name: gnrc_sys_glos_ref_audit                                      */
@@ -802,7 +787,7 @@ COMMENT ON TABLE gnrc_sys_glos_ref_audit
     IS 'gnrc_sys_glos_ref_audit - Creates an audit table for gnrc_sys_glos_ref that tracks changes to the parent table as they are made.';
 
 
-/* Source File:                                                               */
+/* SOURCE: tr_gnrc_sys_glos_ref_audit                                                               */
 /*--+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---*/
 /*                                                                            */
 /* Module Name: gnrc_sys_glos_ref                                            */
