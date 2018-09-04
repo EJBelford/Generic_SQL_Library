@@ -24,7 +24,8 @@
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 -- Automatically available Auto Replace Keywords:
 --    Object Name:     %YourObjectName%
---   Company Name:     %YourOrganization%
+--    Company Name:    %YourOrganization%
+--    Purpose/Desc:    %Descripton%
 --    Sysdate:         %SYSDATE% (YYYY-MM-DD)
 --    Date and Time:   %DATE%, %TIME%, and %DATETIME%
 --    Username:        %USERNAME% (set in TOAD Options, Procedure Editor)
@@ -79,7 +80,7 @@ CREATE SEQUENCE %YourObjectName%_seq
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 
-/*----- 180_Create Table  -----*/
+/*----- 180_Create_Table  -----*/
 
 -- DROP TABLE %YourObjectName%;
 	
@@ -223,7 +224,7 @@ ORDER BY b.column_id;
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 
-/*----- 213_Primary Key -----*/
+/*----- 213_Primary_Key -----*/
 
 ALTER TABLE %YourObjectName%  
     ADD CONSTRAINT pk_%YourObjectName% 
@@ -304,7 +305,7 @@ CREATE UNIQUE INDEX ixu_%YourObjectName%
 --
 /*--*----|----*----|----*----|----*----|----*----|----*----|----*----|----*---*/
 
-/*----- 215_Foreign Key -----*/
+/*----- 215_Foreign_Key -----*/
 
 -- ALTER TABLE %YourObjectName%  DROP CONSTRAINT fk_%YourObjectName%_xx_id;        
 
